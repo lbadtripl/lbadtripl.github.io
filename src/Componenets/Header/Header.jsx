@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import s from './Header.module.css';
+import Modal from './modalWindow';
 
 const Header = (props) => {
     return (
@@ -9,8 +10,7 @@ const Header = (props) => {
                 props.isAuth? 
                 <div> {props.login} - <button onClick = {props.logoutThunkCreator}>Logout</button> </div>
                   :<NavLink to={"/login"}>Login</NavLink>
-            }
-                
+            }     
             </div>
         </header>)
 }
